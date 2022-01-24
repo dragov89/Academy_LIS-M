@@ -1,3 +1,92 @@
 <resources>
     <string name="app_name">Academy_LIS-M</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="registration">Реєстрація</string>
+    <string name="koristuvach">Користувач</string>
+    <string name="parol">Пароль</string>
+    <string name="posivnoi">Позивний</string>
+    <string name="patrol">Патруль</string>
+    <string name="telephone">Телефон</string>
+    <string name="pidrozdil">Підрозділ</string>
+    <string name="sluzba">Служба</string>
+    <string name="user">user</string>
+    <string name="password">password</string>
+    <string name="search_osoba">Особа</string>
+    <string name="search_nomerni_rechi">Номерні речі</string>
+    <string name="search_garpun">Гарпун</string>
+    <string name="search_interpol">Інтерпол</string>
+    <string name="search_dozvil_bdr">Дозвіл БДР</string>
+    <string name="search_adminpostanova">Адмін-постанова</string>
+    <string name="search_adminpostanova_gb">Адмін-постанова ГБ</string>
+    <string name="search_drager">Драгер</string>
+    <string name="search_zatrimani_tz">Затримані ТЗ</string>
+    <string name="search_poi">POI</string>
+    <string name="search_mtsbu">МТСБУ</string>
+    <string name="search_posvidchenya_vodiya">Посвідчення водія</string>
+    <string name="search_avtotransport">Автотранспорт</string>
+    <string name="search_zvit">Звіти</string>
+    <string name="search_algoritm">Алгоритми</string>
+    <string name="search_zakonodavstvo">Законодавство</string>
+    <string name="search_test_photo">Тест фото</string>
+    <string name="search_poruchenya_pdr">Порушення ПДР</string>
+    <string name="search_poisk_ipnp">Пошук ІПНП</string>
+    <string name="search_ipnp">ІПНП</string>
+    <string name="prichina">Причина</string>
+    <string name="prichina1">Причина:</string>
+
+    <string name="lis_m">LIS-M</string>
+    <string name="status_zavdanya_vidsutniy">(Статус завдання: - відсутній)</string>
+    <string name="task_PATRUL">ПАТРУЛЬ</string>
+    <string name="task_posivnoy">Позивний:</string>
+    <string name="task_patrul">Патруль:</string>
+    <string name="task_kotistuvach">Користувач:</string>
+    <string name="task_telephone">Телефон:</string>
+    <string name="task_teritoriya">Територія:</string>
+    <string name="task_btn_zavdanya">Завдання</string>
+    <string name="panel_zadach">Панель задач</string>
+    <string name="poisk_avtotransporta">Пошук автотранспорту</string>
+    <string name="poisk_avto_text">пошук за точним співпадінням, без використання символів маски (*,?,%,_)</string>
+    <string name="btn_poisk_znaiti">Знайти</string>
+    <string name="btn_poisk_derg_nomer">Держ.номер</string>
+    <string name="btn_poisk_vin_kod">VIN код</string>
+    <string name="search_nomerni_rechi_panel">Пошук номерних речей</string>
+    <string name="nomerni_rechi_lico">Лицо</string>
+    <string name="nomerni_rechi_utrata">Утрата</string>
+    <string name="task_status">Статус патруля</string>
+    <string name="noZavdan">Немає поточних завдань !</string>
+    <string name="prinyav">Прийняв</string>
+    <string name="pribuv">Прибув</string>
+    <string name="vikonav">Виконав</string>
+
+    <string name="home_koristuvach_">Слухач</string>
+    <string name="home_teritoriya">Академія ПП м.Київ</string>
+    <string name="home_time">08:00 - 08:00</string>
+    <string name="reestraciya">Реєстрація</string>
+    <string name="search_koristuvach">Користувач: Слухач</string>
+    <string name="no_documents">Документи не знайдено</string>
+    <string name="TZ_ta_NZ_rozchuk">ТЗ та НЗ, що розшукуються</string>
+    <string name="dani_garpun_defolt">Держ. номер - вказується повністю.\nНомер ТЗ - вводиться не менше 5 останіх\nцифир номера кузова/двигуна/шасі.</string>
+
+    <string-array name="posivnoi">
+        <item>ГРАНТ-0504</item>
+        <item>ГРАНТ-0505</item>
+        <item>ГРАНТ-0506</item>
+        <item>ГРАНТ-0507</item>
+        <item>Д-ГРАНТ0201</item>
+        <item>Д-ГРАНТ0202</item>
+        <item>Д-ГРАНТ0203</item>
+        <item>Д-ГРАНТ0204</item>
+        <item>Д-ГРАНТ0205</item>
+    </string-array>
+
+    <string-array name="patrol">
+        <item>SKODA</item>
+        <item>TOYOTA PRIUS</item>
+        <item>VOLKSWAGEN</item>
+        <item>Ланос</item>
+        <item>GEELY</item>
+        <item>MAZDA E2200</item>
+        <item>ISUZU D-MAX</item>
+    </string-array>
 </resources>

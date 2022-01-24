@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".main.tab.task.TaskFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutHome"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="2dp"
+        android:background="@drawable/shape_panel_rect"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.25">
+
+        <TextView
+            android:id="@+id/home_status_verh"
+            style="@style/text_ten_gren"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/reestraziya"
+            android:text="@string/task_PATRUL"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/home_status_niz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/task_status"
+            app:layout_constraintBottom_toBottomOf="@+id/home_status_verh"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/home_status_verh">
+
+            <TextView
+                android:id="@+id/home_posivnoi_tex"
+                style="@style/home_tex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/task_posivnoy"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/home_posivnoi_inf"
+                style="@style/home_inf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/home_posivnoi_tex" />
+
+            <TextView
+                android:id="@+id/home_patrul_tex"
+                style="@style/home_tex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/task_patrul"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/home_posivnoi_inf" />
+
+            <TextView
+                android:id="@+id/home_patrul_inf"
+                style="@style/home_inf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/home_patrul_tex" />
+
+            <TextView
+                android:id="@+id/home_koristuvach_tex"
+                style="@style/home_tex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/task_kotistuvach"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/home_patrul_inf" />
+
+            <TextView
+                android:id="@+id/home_koristuvach_inf"
+                style="@style/home_inf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_koristuvach_"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/home_koristuvach_tex" />
+
+            <TextView
+                android:id="@+id/home_telefon_tex"
+                style="@style/home_tex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/task_telephone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/home_koristuvach_inf" />
+
+            <TextView
+                android:id="@+id/home_telefon_inf"
+                style="@style/home_inf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/home_telefon_tex" />
+
+            <TextView
+                android:id="@+id/home_teritoriya_tex"
+                style="@style/home_tex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/task_teritoriya"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/home_telefon_inf" />
+
+            <TextView
+                android:id="@+id/home_teritoriya_inf"
+                style="@style/home_inf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_teritoriya"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/home_teritoriya_tex" />
+
+            <ProgressBar
+                android:id="@+id/home_progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_margin="5dp"
+                android:progressDrawable="@drawable/progres"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/home_teritoriya_inf" />
+
+            <TextView
+                android:id="@+id/home_smena_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/home_time"
+                android:textColor="#FFAB00"
+                app:layout_constraintEnd_toEndOf="@+id/home_progressBar"
+                app:layout_constraintStart_toStartOf="@+id/home_progressBar"
+                app:layout_constraintTop_toTopOf="@+id/home_progressBar" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/home_btn_sms1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/button_menu_1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/home_btn_reestraciya"
+                style="@style/btn_default"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="4dp"
+                android:text="@string/reestraciya"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/home_btn_sms1" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="2dp"
+        android:background="@drawable/shape_panel_rect"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayoutHome"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/home_status_zavdanya"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/patrul"
+            android:padding="5dp"
+            app:layout_constraintEnd_toStartOf="@+id/home_btn_menu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/home_status_zavdanya_kategoriya"
+                style="@style/text_kategiri_home"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="bottom"
+                android:hint="@string/status_zavdanya_vidsutniy"
+                android:textColorHint="#000000"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/home_status_zavdanya_data_time"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/home_status_zavdanya_kategoriya" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/home_btn_menu"
+            android:layout_width="50dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/button_menu"
+            app:layout_constraintEnd_toStartOf="@+id/home_btn_zavdanya"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/home_btn_zavdanya"
+            android:layout_width="50dp"
+            android:layout_height="80dp"
+            android:background="@drawable/button_vstavka"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/home_adressa_zavdanya"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/patrul"
+            android:padding="2dp"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/home_btn_zavdanya_pusk"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/home_status_zavdanya" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/home_btn_zavdanya_pusk"
+            android:layout_width="104dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/button_pusk"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:text="@string/task_btn_zavdanya"
+            app:layout_constraintBottom_toBottomOf="@+id/home_adressa_zavdanya"
+            app:layout_constraintEnd_toStartOf="@+id/home_btn_maps"
+            app:layout_constraintTop_toBottomOf="@+id/home_btn_menu" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/home_btn_maps"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="9"
+            android:background="@drawable/button_telegram"
+            android:marqueeRepeatLimit="marquee_forever"
+            app:layout_constraintBottom_toBottomOf="@+id/home_adressa_zavdanya"
+            app:layout_constraintEnd_toEndOf="@+id/home_btn_zavdanya"
+            app:layout_constraintTop_toBottomOf="@+id/home_btn_menu" />
+
+
+        <ScrollView
+            android:id="@+id/home_scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/home_adressa_zavdanya">
+
+            <LinearLayout
+                android:id="@+id/info_zavdanya_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/home_info_zavdanya"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/noZavdan"
+                    android:minLines="4"
+                    android:textColor="@android:color/background_light"
+                    android:textColorHint="#F1EDED"
+                    android:textSize="20sp" />
+
+                <RelativeLayout
+                    android:id="@+id/home_raport_relative"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fon_raport"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/raport_min"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/button_raport" />
+
+                    <TextView
+                        android:id="@+id/rich_rap"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_toEndOf="@id/raport_min"
+                        android:background="@drawable/patrul"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="#3F51B5"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/info_rap"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/raport_min"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:textColor="#FFFEFE"
+                        android:textSize="28sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/home_osoba_relative"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/fon_osob"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/raport_min1"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="40dp"
+
+                        android:background="@drawable/button_raport" />
+
+                    <TextView
+                        android:id="@+id/rich_rap1"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_toEndOf="@id/raport_min1"
+                        android:background="@drawable/patrul" />
+
+                    <TextView
+                        android:id="@+id/info_rap1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/raport_min1"
+                        android:layout_margin="5dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/home_btn_raport"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_raport"
+            android:textAllCaps="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            app:layout_constraintHorizontal_bias="1"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/relativeLayout"
+            app:layout_constraintStart_toEndOf="@+id/home_btn_raport">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/home_btn_prinyav"
+                style="@style/home_btn_niz"
+                android:text="@string/prinyav" />
+
+            <TextView
+                android:id="@+id/home_time_prinyav_niz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/home_btn_prinyav"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:elevation="3dp"
+                android:textColor="#0C6A05"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="4dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/relativeLayout3">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/home_btn_pribuv"
+                style="@style/home_btn_niz"
+                android:text="@string/pribuv" />
+
+            <TextView
+                android:id="@+id/home_time_pribuv_niz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/home_btn_pribuv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:elevation="3dp"
+                android:textColor="#0C6A05"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout3"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/home_btn_vikonav"
+                style="@style/home_btn_niz"
+                android:text="@string/vikonav" />
+
+            <TextView
+                android:id="@+id/home_time_vikonav_niz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/home_btn_vikonav"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:elevation="3dp"
+
+                android:textColor="#0C6A05"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

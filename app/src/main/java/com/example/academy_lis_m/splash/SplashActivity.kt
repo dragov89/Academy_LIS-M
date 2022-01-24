@@ -1,11 +1,12 @@
-package com.example.academy_lis_m
+package com.example.academy_lis_m.splash
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.academy_lis_m.R
 
-class MainActivity : AppCompatActivity() {
+class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_splash)
     }
 }
