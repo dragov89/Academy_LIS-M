@@ -85,5 +85,29 @@
             android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <Button
+        android:id="@+id/btn_tab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="56dp"
+        android:backgroundTint="@color/blue_light"
+        android:text="Tab"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/grudelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/layoutYer" />
+
+    <Button
+        android:id="@+id/btn_admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/yellow_light"
+        android:text="Admin"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_tab"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_tab"
+        app:layout_constraintTop_toTopOf="@+id/btn_tab" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

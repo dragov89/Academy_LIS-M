@@ -30,7 +30,7 @@ class TabFragment : Fragment() {
         binding.viewPager.adapter = AdapterPager(requireActivity())
         //binding.tabLayout.tabIconTint = null
         binding.viewPager.isUserInputEnabled = false
-        TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, pos ->
+        TabLayoutMediator(binding.tabLayout, binding.viewPager,false,false) { tab, pos ->
             when (pos) {
                 0 -> tab.text = "Завдання"
                 1 -> tab.text = "Обліки"
