@@ -14,9 +14,10 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/registr_panel_ifo_button"
+            android:id="@+id/btn_registr_panel_ifo"
             android:layout_width="45dp"
             android:layout_height="45dp"
+            android:layout_margin="3dp"
             android:background="@drawable/inform"/>
 
         <TextView
@@ -25,8 +26,6 @@
             android:layout_height="45dp"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp"
             android:background="@drawable/reestraziya"
             android:gravity="center"
             android:textStyle="bold"
@@ -38,6 +37,7 @@
             android:id="@+id/registr_panel_exit_button"
             android:layout_width="45dp"
             android:layout_height="45dp"
+            android:layout_margin="3dp"
             android:background="@drawable/button_exit" />
     </LinearLayout>
 
@@ -206,6 +206,7 @@ registr_pidrozdil_text" />
         android:layout_marginTop="15dp"
         android:background="@drawable/btn"
         android:text="Застосувати"
+        android:layout_marginEnd="5dp"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/registr_panel_reistraciya" />
@@ -219,6 +220,7 @@ registr_pidrozdil_text" />
         android:background="@drawable/btn"
         android:text="Відміна"
         android:textAllCaps="false"
+        android:layout_marginEnd="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/registr_pusk_button" />
 
@@ -229,6 +231,7 @@ registr_pidrozdil_text" />
         android:textSize="18sp"
         android:background="@drawable/exit"
         android:text="Вихід"
+        android:layout_margin="5dp"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
