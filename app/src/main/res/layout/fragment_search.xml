@@ -1,14 +1,228 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".main.tab.search.SearchFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
+        android:id="@+id/scrolViewSeaech"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="0dp"
+        android:background="@android:drawable/bottom_bar"
+        app:layout_constraintTop_toBottomOf="@+id/panel_zadach_garpun"
+        app:layout_constraintBottom_toBottomOf="parent">
 
-</FrameLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/panel_poisk"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingBottom="10dp"
+            android:background="@android:drawable/bottom_bar"
+            app:layout_constraintTop_toBottomOf="@+id/panel_zadach_garpun">
+
+
+            <TextView
+                android:id="@+id/search_koristuvach_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="@string/search_koristuvach"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/search_image_searchIPNP"
+                style="@style/pochuk_image"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/ic_search"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/search_koristuvach_text" />
+
+            <TextView
+                android:id="@+id/search_poisk_ipnp_text"
+                style="@style/pochuk_text"
+                android:layout_marginTop="10dp"
+                android:text="@string/search_poisk_ipnp"
+                app:layout_constraintStart_toEndOf="@+id/search_image_searchIPNP"
+                app:layout_constraintTop_toBottomOf="@+id/search_koristuvach_text" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/search_osoba_button"
+                style="@style/pochuk_botton"
+                android:text="@string/search_osoba"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/search_image_searchIPNP" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/search_nomerni_rechi_button"
+                style="@style/pochuk_botton"
+                android:text="@string/search_nomerni_rechi"
+                app:layout_constraintStart_toEndOf="@+id/search_osoba_button"
+                app:layout_constraintTop_toBottomOf="@+id/search_image_searchIPNP" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/search_garpun_button"
+                style="@style/pochuk_botton"
+                android:text="@string/search_garpun"
+                app:layout_constraintStart_toEndOf="@+id/search_nomerni_rechi_button"
+                app:layout_constraintTop_toBottomOf="@+id/search_image_searchIPNP" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/search_interpol_button"
+                style="@style/pochuk_botton"
+                android:text="@string/search_interpol"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/search_osoba_button" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/search_dozvil_bdr_button"
+                style="@style/pochuk_botton"
+                android:text="@string/search_dozvil_bdr"
+                app:layout_constraintStart_toEndOf="@id/search_interpol_button"
+                app:layout_constraintTop_toBottomOf="@id/search_nomerni_rechi_button" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/search_image_PDR"
+                style="@style/pochuk_image"
+                android:src="@drawable/ic_baseline_edit_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/search_interpol_button" />
+
+            <TextView
+                android:id="@+id/search_poruchenya_pdr_text"
+                style="@style/pochuk_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_poruchenya_pdr"
+                android:textColor="@color/text_pochuk"
+                app:layout_constraintStart_toEndOf="@+id/search_image_PDR"
+                app:layout_constraintTop_toBottomOf="@id/search_dozvil_bdr_button" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/search_adminpostanova_button"
+                style="@style/pochuk_botton"
+                android:text="@string/search_adminpostanova"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/search_image_PDR" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/search_drager_button"
+                style="@style/pochuk_botton"
+                android:text="@string/search_drager"
+                app:layout_constraintStart_toEndOf="@id/search_adminpostanova_gb_button"
+                app:layout_constraintTop_toBottomOf="@id/search_image_PDR" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/search_poi_button"
+                style="@style/pochuk_botton"
+                android:text="@string/search_poi"
+                app:layout_constraintStart_toEndOf="@+id/search_zatrimani_tz_button"
+                app:layout_constraintTop_toBottomOf="@+id/search_adminpostanova_gb_button" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/search_zatrimani_tz_button"
+                style="@style/pochuk_botton"
+                android:text="@string/search_zatrimani_tz"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/search_adminpostanova_button" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/search_mtsbu_button"
+                style="@style/pochuk_botton"
+                android:text="@string/search_mtsbu"
+                app:layout_constraintStart_toEndOf="@+id/search_poi_button"
+                app:layout_constraintTop_toBottomOf="@+id/search_adminpostanova_button" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/search_posvidchenya_vodiya_button"
+                style="@style/pochuk_botton"
+                android:text="@string/search_posvidchenya_vodiya"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/search_zatrimani_tz_button" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/search_avtotransport_button"
+                style="@style/pochuk_botton"
+                android:text="@string/search_avtotransport"
+                app:layout_constraintStart_toEndOf="@id/search_posvidchenya_vodiya_button"
+                app:layout_constraintTop_toBottomOf="@+id/search_poi_button" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/search_adminpostanova_gb_button"
+                style="@style/pochuk_botton"
+                android:text="@string/search_adminpostanova_gb"
+                app:layout_constraintBottom_toBottomOf="@+id/search_adminpostanova_button"
+                app:layout_constraintStart_toEndOf="@id/search_adminpostanova_button" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/search_image_IPNP"
+                style="@style/pochuk_image"
+                android:src="@drawable/ic_search"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/search_posvidchenya_vodiya_button" />
+
+            <TextView
+                android:id="@+id/search_ipnp_button"
+                style="@style/pochuk_text"
+                android:text="@string/search_ipnp"
+                android:textColor="@color/text_pochuk"
+                app:layout_constraintStart_toEndOf="@+id/search_image_IPNP"
+                app:layout_constraintTop_toBottomOf="@+id/search_posvidchenya_vodiya_button" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/search_zvit_button"
+                style="@style/pochuk_botton"
+                android:text="@string/search_algoritm"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/search_image_IPNP" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/search_algoritm_button"
+                style="@style/pochuk_botton"
+                android:text="@string/search_zakonodavstvo"
+                app:layout_constraintStart_toEndOf="@id/search_zvit_button"
+                app:layout_constraintTop_toBottomOf="@id/search_image_IPNP" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/panel_zadach_garpun"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/edit_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/search_panel_zadach_text"
+            style="@style/text_panel_gren"
+            android:text="Панель задач"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/search_panel_zadach_menu_button"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/button_menu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
