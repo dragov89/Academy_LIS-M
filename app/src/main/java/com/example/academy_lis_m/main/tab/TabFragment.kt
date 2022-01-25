@@ -16,7 +16,7 @@ class TabFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentTabBinding.inflate(inflater)
         return binding.root
     }
@@ -29,16 +29,14 @@ class TabFragment : Fragment() {
     private fun init() {
         binding.viewPager.adapter = AdapterPager(requireActivity())
         //binding.tabLayout.tabIconTint = null
-        TabLayoutMediator(binding.tabLayout, binding.viewPager){
-            tab, pos ->
-            when(pos){
+        binding.viewPager.isUserInputEnabled = false
+        TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, pos ->
+            when (pos) {
                 0 -> tab.text = "Завдання"
                 1 -> tab.text = "Обліки"
                 2 -> tab.text = "Повідомлення"
-
             }
         }.attach()
-
     }
 
 }
