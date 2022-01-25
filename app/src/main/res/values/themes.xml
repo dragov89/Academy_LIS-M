@@ -91,4 +91,48 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
+    <style name="pochuk_image">
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+    </style>
+    <style name="pochuk_text">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:shadowColor">#514E4E</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+        <item name="android:textColor">@color/text_pochuk</item>
+        <item name="android:layout_marginStart">25dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+    </style>
+    <style name="pochuk_botton">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">21sp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:background">@drawable/button_selector</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="layout_constraintWidth_percent">0.3</item>
+    </style>
+    <style name="text_panel_gren">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/panel_zadach_original</item>
+        <item name="android:gravity">center</item>
+        <item name="android:shadowColor">#1E1D1D</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">5</item>
+        <item name="android:textColor">@color/panel</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>

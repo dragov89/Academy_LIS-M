@@ -19,4 +19,7 @@
     <color name="md_grey_700">#616161</color>
     <color name="btn_gradient_startColor">#BDBDBD</color>
     <color name="btn_gradient_endColor">#9E9E9E</color>
+    <color name="text_pochuk">#072AF4</color>
+    <color name="obvodra_button">#AAAAAA</color>
+    <color name="panel">#00EE00</color>
 </resources>
