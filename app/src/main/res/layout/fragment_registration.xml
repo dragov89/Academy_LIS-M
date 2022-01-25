@@ -17,8 +17,7 @@
             android:id="@+id/registr_panel_ifo_button"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:background="@drawable/inform"
-            />
+            android:background="@drawable/inform"/>
 
         <TextView
             android:id="@+id/registr_panel_reistraciya_text"
@@ -39,10 +38,8 @@
             android:id="@+id/registr_panel_exit_button"
             android:layout_width="45dp"
             android:layout_height="45dp"
-
             android:background="@drawable/button_exit" />
     </LinearLayout>
-
 
     <TextView
         android:id="@+id/registr_koristuvach_text"
@@ -104,7 +101,6 @@
 registr_posivnoi_text,registr_patrol_text,registr_telephone_text,registr_sluzba_text,
 registr_pidrozdil_text" />
 
-
     <EditText
         android:id="@+id/task_user_edit"
         style="@style/Registr_edit_tex"
@@ -148,7 +144,6 @@ registr_pidrozdil_text" />
         android:entries="@array/patrol"
         app:layout_constraintStart_toEndOf="@+id/barrier_text"
         app:layout_constraintTop_toBottomOf="@+id/posivnoi_spisok" />
-
 
     <EditText
         android:id="@+id/task_patrul_nomer_edit"
@@ -201,9 +196,7 @@ registr_pidrozdil_text" />
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:barrierDirection="start"
-        app:constraint_referenced_ids="registr_pusk_button,registr_clear_button"
-        />
-
+        app:constraint_referenced_ids="registr_pusk_button,registr_clear_button"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/registr_pusk_button"
