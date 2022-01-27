@@ -1,14 +1,208 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".main.tab.task.RaportFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
 
-</FrameLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/save_raport"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/button_save"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/result_raport"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/categoriya_panel"
+                android:gravity="center"
+                android:text="Результат виконання завдання"
+                android:textColor="@color/text_pochuk"
+                android:textSize="28sp"
+                app:layout_constraintEnd_toStartOf="@+id/exit_raport"
+                app:layout_constraintStart_toEndOf="@+id/save_raport"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/exit_raport"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/button_exit"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            <TextView
+                android:id="@+id/richenya"
+                style="@style/Raport_bok_tex"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/result_raport"
+                android:text="Прийняте рішення:" />
+
+            <Spinner
+                android:id="@+id/spisok_richenya"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/gradient_spiner"
+                android:entries="@array/richenya"
+                app:layout_constraintEnd_toStartOf="@+id/relativeLayout4"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/richenya" />
+
+            <TextView
+                android:id="@+id/kvalifikaciya"
+                style="@style/Raport_bok_tex"
+                android:layout_marginStart="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spisok_richenya"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Кваліфікація:" />
+
+            <Spinner
+                android:id="@+id/spisok_kvalifikaciya"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/gradient_spiner"
+                android:entries="@array/kvalifikaciya"
+                app:layout_constraintEnd_toStartOf="@+id/relativeLayout4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kvalifikaciya" />
+
+            <TextView
+                android:id="@+id/dodatkova"
+                style="@style/Raport_bok_tex"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Додаткова інформація:"
+                app:layout_constraintEnd_toStartOf="@+id/relativeLayout4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spisok_kvalifikaciya" />
+
+            <EditText
+                android:id="@+id/dodatkova_edit"
+                android:layout_width="0dp"
+                android:layout_height="61dp"
+                android:layout_marginStart="15dp"
+                android:background="@android:color/background_light"
+                android:maxLines="3"
+                app:layout_constraintEnd_toEndOf="@+id/spisok_kvalifikaciya"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dodatkova" />
+
+            <TextView
+                android:id="@+id/dodatkova_primitki"
+                style="@style/Raport_bok_tex"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Додаткова інформація(Примітки):"
+                app:layout_constraintEnd_toStartOf="@+id/relativeLayout4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dodatkova_edit" />
+
+            <EditText
+                android:id="@+id/dodatkova_primitki_edit"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="15dp"
+                android:background="@android:color/background_light"
+                android:maxLines="3"
+                app:layout_constraintEnd_toEndOf="@+id/dodatkova_edit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dodatkova_primitki" />
+
+
+
+            <LinearLayout
+                android:id="@+id/relativeLayout4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/button_doda"
+                android:orientation="vertical"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/result_raport">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/diyu"
+                    android:layout_width="120dp"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/diyu" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/osobu"
+                    android:layout_width="120dp"
+                    android:layout_height="55dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/osobu" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/rich"
+                    android:layout_width="120dp"
+                    android:layout_height="55dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/ri4" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/foto"
+                    android:layout_width="120dp"
+                    android:layout_height="55dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/fotoss"
+                    android:textIsSelectable="true" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Додати"
+                android:textStyle="bold"
+                android:background="@color/md_grey_700"
+                android:textColor="@color/doda_obvodka"
+                app:layout_constraintBottom_toTopOf="@+id/relativeLayout4"
+                app:layout_constraintEnd_toEndOf="@+id/relativeLayout4"
+                app:layout_constraintStart_toEndOf="@+id/dodatkova"
+                app:layout_constraintTop_toTopOf="@+id/relativeLayout4" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

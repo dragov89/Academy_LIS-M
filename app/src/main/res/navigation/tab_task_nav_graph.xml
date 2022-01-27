@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/taskFragment"
-        android:name="com.example.academy_lis_m.main.tab.task.TaskFragment"
+        android:name="com.example.academy_lis_m.main.tab.task.home.TaskFragment"
         android:label="fragment_task"
         tools:layout="@layout/fragment_task" >
         <action
@@ -44,5 +44,9 @@
         android:id="@+id/raportFragment"
         android:name="com.example.academy_lis_m.main.tab.task.RaportFragment"
         android:label="fragment_raport"
-        tools:layout="@layout/fragment_raport" />
+        tools:layout="@layout/fragment_raport" >
+        <action
+            android:id="@+id/action_raportFragment_to_taskFragment"
+            app:destination="@id/taskFragment" />
+    </fragment>
 </navigation>
