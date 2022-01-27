@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_splash" />
     <activity
         android:id="@+id/mainActivity"
-        android:name="com.example.academy_lis_m.main.MainActivity"
+        android:name="com.example.academy_lis_m.main.presentation.MainActivity"
         android:label="activity_main"
         tools:layout="@layout/activity_main" >
         <argument

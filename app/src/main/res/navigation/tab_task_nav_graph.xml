@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/registrationFragment"
-        android:name="com.example.academy_lis_m.main.tab.task.RegistrationFragment"
+        android:name="com.example.academy_lis_m.main.presentation.tab.task.Register.RegistrationFragment"
         android:label="fragment_registration"
         tools:layout="@layout/fragment_registration">
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/taskFragment"
-        android:name="com.example.academy_lis_m.main.tab.task.home.TaskFragment"
+        android:name="com.example.academy_lis_m.main.presentation.tab.task.home.TaskFragment"
         android:label="fragment_task"
         tools:layout="@layout/fragment_task" >
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/categoriesFragment"
-        android:name="com.example.academy_lis_m.main.tab.task.CategoriesFragment"
+        android:name="com.example.academy_lis_m.main.presentation.tab.task.CategoriesFragment"
         android:label="fragment_categories"
         tools:layout="@layout/fragment_categories" >
         <action
@@ -37,12 +37,12 @@
     </fragment>
     <fragment
         android:id="@+id/newTaskFragment"
-        android:name="com.example.academy_lis_m.main.tab.task.NewTaskFragment"
+        android:name="com.example.academy_lis_m.main.presentation.tab.task.NewTaskFragment"
         android:label="fragment_new_task"
         tools:layout="@layout/fragment_new_task" />
     <fragment
         android:id="@+id/raportFragment"
-        android:name="com.example.academy_lis_m.main.tab.task.RaportFragment"
+        android:name="com.example.academy_lis_m.main.presentation.tab.task.RaportFragment"
         android:label="fragment_raport"
         tools:layout="@layout/fragment_raport" >
         <action

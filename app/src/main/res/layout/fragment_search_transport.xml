@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".main.tab.search.SearchTransportFragment">
+    tools:context=".main.presentation.tab.search.SearchTransportFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

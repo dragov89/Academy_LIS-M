@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Academy_LISM" >
         <activity
-            android:name=".main.MainActivity"
+            android:name=".main.presentation.MainActivity"
             android:exported="false" />
         <activity
             android:name=".splash.SplashActivity"

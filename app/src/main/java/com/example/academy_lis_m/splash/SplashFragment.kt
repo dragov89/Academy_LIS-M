@@ -7,8 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.academy_lis_m.databinding.FragmentSplashBinding
-import com.example.academy_lis_m.main.MainActivity
-import com.example.academy_lis_m.main.MainActivityArgs
+import com.example.academy_lis_m.main.presentation.MainActivity
+import com.example.academy_lis_m.main.presentation.MainActivityArgs
 
 //
 class SplashFragment : Fragment() {

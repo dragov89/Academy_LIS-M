@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/adminHomeFragment"
-        android:name="com.example.academy_lis_m.main.admin.AdminHomeFragment"
+        android:name="com.example.academy_lis_m.main.presentation.admin.AdminHomeFragment"
         android:label="fragment_admin_home"
         tools:layout="@layout/fragment_admin_home" >
         <action
@@ -19,12 +19,12 @@
     </fragment>
     <fragment
         android:id="@+id/adminListFragment"
-        android:name="com.example.academy_lis_m.main.admin.AdminListFragment"
+        android:name="com.example.academy_lis_m.main.presentation.admin.AdminListFragment"
         android:label="fragment_admin_list"
         tools:layout="@layout/fragment_admin_list" />
     <fragment
         android:id="@+id/tabFragment"
-        android:name="com.example.academy_lis_m.main.tab.TabFragment"
+        android:name="com.example.academy_lis_m.main.presentation.tab.TabFragment"
         android:label="fragment_tab"
         tools:layout="@layout/fragment_tab" />
 </navigation>
