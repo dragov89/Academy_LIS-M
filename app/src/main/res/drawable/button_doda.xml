@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<shape xmlns:Android="http://schemas.android.com/apk/res/android">
+    <solid Android:color="@color/md_grey_700" />
+
+    <stroke Android:color="@color/doda_obvodka" Android:width="1dp">
+
+    </stroke>
+
+    <corners Android:radius="5dp"/>
+
+
+</shape>
