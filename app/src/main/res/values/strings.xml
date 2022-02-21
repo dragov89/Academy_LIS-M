@@ -62,7 +62,7 @@
 
     <string name="home_koristuvach_">Слухач</string>
     <string name="home_teritoriya">Академія ПП м.Київ</string>
-    <string name="home_time">08:00 - 08:00</string>
+    <string name="home_time">08:00 – 08:00</string>
     <string name="reestraciya">Реєстрація</string>
     <string name="search_koristuvach">Користувач: Слухач</string>
     <string name="no_documents">Документи не знайдено</string>
@@ -92,7 +92,7 @@
     </string-array>
 
     <string-array name="richenya">
-        <item></item>
+        <item> </item>
         <item>Інформація не підтвердилася </item>
         <item>відсутній заявник</item>
         <item>відсутня подія</item>
