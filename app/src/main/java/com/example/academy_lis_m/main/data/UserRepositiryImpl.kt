@@ -1,35 +1,59 @@
 package com.example.academy_lis_m.main.data
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import com.example.academy_lis_m.main.domain.User
-import com.example.academy_lis_m.main.domain.repository.RegisterRepository
+import com.example.academy_lis_m.main.domain.UserRepository
+import kotlin.random.Random
 
-object UserRepositiryImpl : RegisterRepository {
+object UserRepositoryImpl : UserRepository {
 
-    private val userList = mutableListOf<User>()
 
-    override fun register(login: String, pass: String): Boolean {
-        return false
+    private val listUserLiveData = MutableLiveData<List<User>>()
+
+    //сортування списку (компаратор) ({p0, p1 -> p0.id.compareTo(p1.id)}) по ід
+    private val userList = sortedSetOf<User>({ p0, p1 -> p0.id.compareTo(p1.id) })
+
+    private var autoIncrementId = 0
+
+    //список (заповнення списка даними)
+    init {
+        for (i in 0 until 5) {
+            val item = User("Login $i", "$i", "Name $i", Random.nextBoolean())
+            addUserItem(item)
+        }
     }
 
-    override fun addUser(user: User) {
+    override fun addUserItem(user: User) {
+        if (user.id == User.UNDEF_ID) {
+            user.id = autoIncrementId++
+        }
         userList.add(user)
+        updateList()
     }
 
-    override fun deleteUser(user: User) {
+    override fun deleteUserItem(user: User) {
         userList.remove(user)
+        updateList()
     }
 
-    override fun editUser(user: User) {
-        val oldElement = getUser(user.id)
-        userList.remove(oldElement)
-        addUser(user)
+    override fun editUserItem(user: User) {
+        val oldUser = idUserItem(user.id)
+        userList.remove(oldUser)
+        addUserItem(user)
     }
 
-    override fun getUser(userId: Int): User {
-        return userList.find { it.id == userId } ?: throw RuntimeException(" user null")
+    override fun idUserItem(userItemId: Int): User {
+        return userList.find {
+            it.id == userItemId
+        } ?: throw RuntimeException("id $userItemId not found")
     }
 
-    override fun getUserList(): List<User> {
-        return userList
+    override fun getUserList(): LiveData<List<User>> {
+        return listUserLiveData
+    }
+
+    fun updateList() {
+        listUserLiveData.value = userList.toList()
     }
 }

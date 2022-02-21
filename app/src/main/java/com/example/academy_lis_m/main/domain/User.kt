@@ -1,13 +1,14 @@
 package com.example.academy_lis_m.main.domain
-
 data class User(
-    val id:Int,
-    var admin: Boolean = false,
     val login:String,
     val password:String,
     val name:String,
-    var posivnoi:String = "posivnoi",
-    var patrul:String = "patrul",
-    var phone:String= "+380000000000",
-    val territory:String
-)
+    var status:Boolean= true,
+    var yer:Int = DEF_YER,
+    var id:Int = UNDEF_ID
+){
+    companion object{
+        const val UNDEF_ID = -1
+        const val DEF_YER = 99
+    }
+}

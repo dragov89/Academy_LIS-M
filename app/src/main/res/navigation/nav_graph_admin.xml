@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_grapch_admin"
+    app:startDestination="@id/adminHomeFragment">
+
+    <fragment
+        android:id="@+id/adminListItemFragment"
+        android:name="com.example.academy_lis_m.main.presentation.admin.adminList.AdminListItemFragment"
+        android:label="fragment_admin_list_item"
+        tools:layout="@layout/fragment_admin_list_item" >
+        <action
+            android:id="@+id/action_adminListItemFragment_to_adminUserFragment"
+            app:destination="@id/adminUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminUserFragment"
+        android:name="com.example.academy_lis_m.main.presentation.admin.adminUser.AdminUserFragment"
+        android:label="fragment_admin_user"
+        tools:layout="@layout/fragment_admin_user" >
+        <argument
+            android:name="screen_mod"
+            app:argType="boolean" />
+        <argument
+            android:name="id_user_item"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminHomeFragment"
+        android:name="com.example.academy_lis_m.main.presentation.admin.AdminHomeFragment"
+        android:label="fragment_admin_home"
+        tools:layout="@layout/fragment_admin_home" >
+        <action
+            android:id="@+id/action_adminHomeFragment_to_adminListItemFragment"
+            app:destination="@id/adminListItemFragment" />
+    </fragment>
+</navigation>

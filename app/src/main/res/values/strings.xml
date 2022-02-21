@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Academy_LIS-M</string>
     <!-- TODO: Remove or change this placeholder text -->
+    <string name="error_input">заповніть дані</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="registration">Реєстрація</string>
     <string name="koristuvach">Користувач</string>

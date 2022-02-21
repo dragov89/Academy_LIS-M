@@ -23,4 +23,6 @@
     <color name="obvodra_button">#AAAAAA</color>
     <color name="panel">#00EE00</color>
     <color name="doda_obvodka">#FF6D00</color>
+    <color name="lemon">#8BC34A</color>
+    <color name="lemon_lite">#AAAE8B</color>
 </resources>
