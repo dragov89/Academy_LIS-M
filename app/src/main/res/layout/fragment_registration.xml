@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".main.tab.task.RegistrationFragment">
+    tools:context=".main.presentation.tab.task.Register.RegistrationFragment">
     <LinearLayout
         android:id="@+id/registr_panel_reistraciya"
         android:layout_width="match_parent"

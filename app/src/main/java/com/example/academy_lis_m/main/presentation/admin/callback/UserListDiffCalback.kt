@@ -1,0 +1,29 @@
+package com.example.adminpanel.presentation.callback
+
+import androidx.recyclerview.widget.DiffUtil
+import com.example.academy_lis_m.main.domain.User
+
+class UserListDiffCalback(
+    private val oldList: List<User>,
+    private val newList: List<User>
+): DiffUtil.Callback() {
+    override fun getOldListSize(): Int {
+        return oldList.size
+    }
+
+    override fun getNewListSize(): Int {
+    return newList.size
+    }
+
+    override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
+        val oldItem = oldList[oldItemPosition]
+        val newItem = newList[newItemPosition]
+    return oldItem.id == newItem.id
+    }
+
+    override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
+        val oldItem = oldList[oldItemPosition]
+        val newItem = newList[newItemPosition]
+        return oldItem == newItem
+    }
+}
