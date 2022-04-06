@@ -69,6 +69,25 @@
     <string name="TZ_ta_NZ_rozchuk">ТЗ та НЗ, що розшукуються</string>
     <string name="dani_garpun_defolt">Держ. номер - вказується повністю.\nНомер ТЗ - вводиться не менше 5 останіх\nцифир номера кузова/двигуна/шасі.</string>
 
+    <!-- Призвище ім'я по батькові рік народження -->
+    <string name="prizviche">Прізвище</string>
+    <string name="imya">Ім\'я</string>
+    <string name="pobatkovi">По батькові</string>
+    <string name="rik_narodzenya">Рік народження</string>
+
+
+    <!-- Пошук очистка -->
+    <string name="clear">Очистити</string>
+    <string name="search">Пошук</string>
+
+
+    <!-- Текст пошук особи -->
+    <string name="dani_osoba_defolt">(дані про особу вводяться рос.мовою)\n Обов\'язкові для заповнення - Фамилия, Имя\n Скорочення не допускаються</string>
+
+    <!-- Текст пошук номерних речей -->
+    <string name="dani_nomerni_rechi_defolt">Якщо відома тільки частина номеру, потрібно\nдобавляти символи обриву (* або %)\nНаприклад:\n137* (шукати номер, що починається на 137),\n*245 (шукати номер, що закінчується на 245),\n*091* (шукати номер, в якому зустрічається\nнабір символів 091)</string>
+
+
     <string-array name="posivnoi">
         <item>ГРАНТ-0504</item>
         <item>ГРАНТ-0505</item>
@@ -140,5 +159,24 @@
         <item>ІНШІ ТІЛЕСНІ УШКОДЖЕННЯ</item>
         <item>ХУЛІГАНСТВО</item>
         <item>НАРУГА НАД МОГИЛОЮ</item>
+    </string-array>
+
+
+    <string-array name="prichina">
+        <item> </item>
+        <item>ЗАЯВНИК</item>
+        <item>ОФОРМЛЕННЯ АДМІНМАТЕРІАЛІВ</item>
+        <item>ПІДОЗРІЛА ОСОБА</item>
+        <item>ПІДОЗРІЛИЙ ТРАНСПОРТНИЙ ЗАСІБ</item>
+        <item>ОРІЄНТУВАННЯ</item>
+        <item>ПОРУШЕННЯ ПДР</item>
+        <item>ПОРУШЕННЯ ГБ</item>
+        <item>ПЕРЕВІРКА ДОКУМЕНТІВ</item>
+        <item>ПРИВАТНЕ ПЕРЕВЕЗЕННЯ НА АВТО В НОЧІ</item>
+        <item>СЕКСУАЛЬНІ ПОСЛУГИ НА АТОШЛЯХАХ</item>
+        <item>АВТОТРАНСПОРТ МАЄ ОЗНАКИ БЕЗГОСПОДАРНОГО</item>
+        <item>АТОТРАНСПОРТ МАЄ ОЗНАКИ ДТП</item>
+        <item>ПІДОЗРА У СКОЄННІ ЗЛОЧИНУ</item>
+        <item>ІНШЕ</item>
     </string-array>
 </resources>

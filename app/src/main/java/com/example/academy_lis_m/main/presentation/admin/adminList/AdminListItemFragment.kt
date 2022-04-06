@@ -56,32 +56,9 @@ class AdminListItemFragment : Fragment() {
         )
         clickLongListener()
         clickListener()
-//        swipeListener()
+
     }
 
-    //    private fun swipeListener() {
-//        val callback = object :
-//            ItemTouchHelper.SimpleCallback(
-//                0,
-//                ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT
-//            ) {
-//            override fun onMove(
-//                recyclerView: RecyclerView,
-//                viewHolder: RecyclerView.ViewHolder,
-//                target: RecyclerView.ViewHolder
-//            ): Boolean {
-//                return false
-//            }
-//
-//            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-//                1 варіант(UserListDiffCallback) val item = userAdapter.userList[viewHolder.adapterPosition]
-//                2 варіант(UserItemDiffCallback) val item = userAdapter.currentList[viewHolder.adapterPosition]
-//                viewModel.deleteUser(item)
-//            }
-//        }
-//        val itemTouchHelper = ItemTouchHelper(callback)
-//        itemTouchHelper.attachToRecyclerView(binding.rcUserList)
-//    }
     private fun clickListener() {
         userAdapter.onUserClickListener = {
             val itemId = it.id

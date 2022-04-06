@@ -1,14 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/shape_panel_rect"
     tools:context=".main.presentation.tab.task.NewTaskFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
-</FrameLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/save_nove_zavdanya"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/button_save"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/result_nove_zavdanya"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="3dp"
+                android:background="@color/btn_gradient_endColor"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text="Введення нового завдання"
+                android:textColor="@color/text_pochuk"
+                android:textSize="28sp"
+                app:layout_constraintEnd_toStartOf="@+id/exit_nove_zavdanya"
+                app:layout_constraintStart_toEndOf="@+id/save_nove_zavdanya"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/exit_nove_zavdanya"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/button_exit"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/podiya_nove_zavdanya"
+                style="@style/Raport_bok_tex"
+                android:layout_marginTop="10dp"
+                android:text="Подія:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/result_nove_zavdanya" />
+
+            <Spinner
+                android:id="@+id/spisok_nove_zavdanya"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_spiner"
+                android:entries="@array/richenya"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/podiya_nove_zavdanya" />
+
+            <TextView
+                android:id="@+id/misce_nove_zavdanya"
+                style="@style/Raport_bok_tex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Місце реєстрації події (довг./шир.):"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spisok_nove_zavdanya" />
+
+            <EditText
+                android:id="@+id/dovgota_nove_zavdanya"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:text="50.41835341348493"
+                android:background="@drawable/edit_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/misce_nove_zavdanya" />
+
+            <EditText
+                android:id="@+id/hirota_nove_zavdanya"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:text="30.457136321809443"
+                android:background="@drawable/edit_text"
+                app:layout_constraintStart_toEndOf="@+id/dovgota_nove_zavdanya"
+                app:layout_constraintTop_toBottomOf="@+id/misce_nove_zavdanya" />
+
+            <TextView
+                android:id="@+id/derg_nomer_nove_zavdanya"
+                style="@style/Raport_bok_tex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Держ номер(а):"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dovgota_nove_zavdanya" />
+
+            <EditText
+                android:id="@+id/derg_nomer_one_edit_nove_zavdanya"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:maxLines="1"
+                android:background="@android:color/background_light"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/derg_nomer_nove_zavdanya" />
+
+            <EditText
+                android:id="@+id/derg_nomer_two_edit_nove_zavdanya"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="15dp"
+                android:maxLines="1"
+                android:background="@android:color/background_light"
+                app:layout_constraintStart_toEndOf="@+id/derg_nomer_one_edit_nove_zavdanya"
+                app:layout_constraintTop_toBottomOf="@+id/derg_nomer_nove_zavdanya" />
+
+            <EditText
+                android:id="@+id/derg_nomer_three_edit_nove_zavdanya"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="15dp"
+                android:maxLines="1"
+                android:background="@android:color/background_light"
+                app:layout_constraintStart_toEndOf="@+id/derg_nomer_two_edit_nove_zavdanya"
+                app:layout_constraintTop_toBottomOf="@+id/derg_nomer_nove_zavdanya" />
+
+            <TextView
+                android:id="@+id/opis_nove_zavdanya"
+                style="@style/Raport_bok_tex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Додаткова інформація(Примітки):"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/derg_nomer_one_edit_nove_zavdanya" />
+
+            <EditText
+                android:id="@+id/opis_edit_nove_zavdanya"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@android:color/background_light"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/opis_nove_zavdanya" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

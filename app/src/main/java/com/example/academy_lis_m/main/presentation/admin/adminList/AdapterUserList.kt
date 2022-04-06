@@ -18,13 +18,6 @@ class AdapterUserList : ListAdapter<User,
         val tvLogin = view.findViewById<TextView>(R.id.tv_login)
     }
 
-    //    var userList = listOf<User>()
-//        set(value) {
-//            val callback =  UserListDiffCalback(userList, value)
-//            val diffResult = DiffUtil.calculateDiff(callback)
-//            diffResult.dispatchUpdatesTo(this)
-//            field = value
-//        }
     var onUserClickLongListener: ((User) -> Unit)? = null
     var onUserClickListener: ((User) -> Unit)? = null
 

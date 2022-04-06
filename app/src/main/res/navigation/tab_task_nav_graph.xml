@@ -34,12 +34,19 @@
         <action
             android:id="@+id/action_categoriesFragment_to_raportFragment"
             app:destination="@id/raportFragment" />
+        <action
+            android:id="@+id/action_categoriesFragment_to_taskFragment"
+            app:destination="@id/taskFragment" />
     </fragment>
     <fragment
         android:id="@+id/newTaskFragment"
         android:name="com.example.academy_lis_m.main.presentation.tab.task.NewTaskFragment"
         android:label="fragment_new_task"
-        tools:layout="@layout/fragment_new_task" />
+        tools:layout="@layout/fragment_new_task" >
+        <action
+            android:id="@+id/action_newTaskFragment_to_taskFragment"
+            app:destination="@id/taskFragment" />
+    </fragment>
     <fragment
         android:id="@+id/raportFragment"
         android:name="com.example.academy_lis_m.main.presentation.tab.task.RaportFragment"

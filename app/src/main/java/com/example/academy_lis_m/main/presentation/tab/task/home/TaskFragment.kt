@@ -21,8 +21,13 @@ private lateinit var binding: FragmentTaskBinding
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.homeBtnRaport.setOnClickListener {
-            findNavController().navigate(R.id.action_taskFragment_to_categoriesFragment)
+        binding.apply {
+            homeBtnRaport.setOnClickListener {
+                findNavController().navigate(R.id.action_taskFragment_to_categoriesFragment)
+            }
+            homeBtnZavdanya.setOnClickListener {
+                findNavController().navigate(R.id.action_taskFragment_to_newTaskFragment)
+            }
         }
     }
 

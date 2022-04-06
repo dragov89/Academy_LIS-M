@@ -165,22 +165,4 @@ class AdminUserFragment : Fragment() {
 
     }
 
-//    companion object{
-//        private const val ID_ITEM = "idUserItem"
-//        private const val EXTRA_SCREEN_MOD = "extra_mode"
-//        private const val EDIT_MOD = "edit_mod"
-//        private const val ADD_MOD = "add_mod"
-//
-//        fun newIntentAddItem(context: Context):Intent{
-//            val intent = Intent(context, MainActivity::class.java )
-//            intent.putExtra(EXTRA_SCREEN_MOD, ADD_MOD)
-//            return intent
-//        }
-//        fun newIntentEditItem(context: Context, userItemId: Int):Intent{
-//            val intent = Intent(context, MainActivity::class.java )
-//            intent.putExtra(EXTRA_SCREEN_MOD, EDIT_MOD)
-//            intent.putExtra(ID_ITEM, userItemId)
-//            return intent
-//        }
-//    }
 }

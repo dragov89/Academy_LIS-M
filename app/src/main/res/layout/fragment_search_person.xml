@@ -1,14 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".main.presentation.tab.search.SearchPersonFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containet_garpun"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_marginTop="43dp"
+        android:background="@android:color/darker_gray"
+        >
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/search_osoba_prichina_text"
+            style="@style/pochuk_osoba_text"
+            android:layout_marginTop="20dp"
+            android:text="@string/prichina"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/search_osoba_prizviche_text"
+            style="@style/pochuk_osoba_text"
+            android:text="@string/prizviche"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/search_osoba_prichina_text" />
+
+        <TextView
+            android:id="@+id/search_osoba_imya_text"
+            style="@style/pochuk_osoba_text"
+            android:text="@string/imya"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/search_osoba_prizviche_text" />
+
+        <TextView
+            android:id="@+id/search_osoba_pobatkovi_text"
+            style="@style/pochuk_osoba_text"
+            android:text="@string/pobatkovi"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/search_osoba_imya_text" />
+
+        <TextView
+            android:id="@+id/search_osoba_rik_narodzenya_text"
+            style="@style/pochuk_osoba_text"
+            android:text="@string/rik_narodzenya"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/search_osoba_pobatkovi_text" />
+
+        <Spinner
+            android:id="@+id/search_osoba_prichina_spiner"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/gradient_spiner"
+            android:entries="@array/prichina"
+            app:layout_constraintStart_toStartOf="@+id/search_osoba_prizviche_edit_text"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/search_osoba_prizviche_edit_text"
+            style="@style/pochuk_osoba_edit_tex"
+            app:layout_constraintStart_toEndOf="@+id/search_osoba_rik_narodzenya_text"
+            app:layout_constraintTop_toBottomOf="@id/search_osoba_prichina_spiner" />
+
+        <EditText
+            android:id="@+id/search_osoba_imya_edit_text"
+            style="@style/pochuk_osoba_edit_tex"
+            app:layout_constraintStart_toEndOf="@+id/search_osoba_rik_narodzenya_text"
+            app:layout_constraintTop_toBottomOf="@id/search_osoba_prizviche_edit_text" />
+
+        <EditText
+            android:id="@+id/search_osoba_pobatkovi_edit_text"
+            style="@style/pochuk_osoba_edit_tex"
+            app:layout_constraintStart_toEndOf="@+id/search_osoba_rik_narodzenya_text"
+            app:layout_constraintTop_toBottomOf="@id/search_osoba_imya_edit_text" />
+
+        <EditText
+            android:id="@+id/search_osoba_rik_narodzenya_edit_text"
+            style="@style/pochuk_osoba_edit_tex"
+            android:layout_width="80dp"
+            android:inputType="number"
+            android:maxLength="4"
+            app:layout_constraintStart_toEndOf="@+id/search_osoba_rik_narodzenya_text"
+            app:layout_constraintTop_toBottomOf="@+id/search_osoba_pobatkovi_edit_text" />
+
+        <TextView
+            android:id="@+id/search_osoba_inform_text"
+            android:layout_width="match_parent"
+            android:layout_height="107dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/dani_osoba_defolt"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/search_osoba_rik_narodzenya_edit_text" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/poisk_osoba"
+            android:layout_width="96dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/btn"
+            android:text="@string/search"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/search_osoba_prichina_spiner"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/clear_osoba"
+            android:layout_width="96dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/btn"
+            android:text="@string/clear"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/poisk_osoba"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/panel_zadach_garpun"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/edit_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            style="@style/text_panel_gren"
+            android:text="Пошук особи"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/search_panel_zadach_menu_button"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="3dp"
+
+            android:background="@drawable/button_menu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

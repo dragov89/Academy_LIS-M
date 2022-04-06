@@ -21,8 +21,29 @@ class CategoriesFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.one.setOnClickListener {
-            findNavController().navigate(R.id.action_categoriesFragment_to_raportFragment)
+        binding.apply {
+            one.setOnClickListener {
+                findNavController().navigate(R.id.action_categoriesFragment_to_raportFragment)
+            }
+            two.setOnClickListener {
+                findNavController().navigate(R.id.action_categoriesFragment_to_raportFragment)
+            }
+            three.setOnClickListener {
+                findNavController().navigate(R.id.action_categoriesFragment_to_raportFragment)
+            }
+            four.setOnClickListener {
+                findNavController().navigate(R.id.action_categoriesFragment_to_raportFragment)
+            }
+            five.setOnClickListener {
+                findNavController().navigate(R.id.action_categoriesFragment_to_raportFragment)
+            }
+            six.setOnClickListener {
+                findNavController().navigate(R.id.action_categoriesFragment_to_raportFragment)
+            }
+
+            exitKategoriya.setOnClickListener {
+                findNavController().navigate(R.id.action_categoriesFragment_to_taskFragment)
+            }
         }
     }
 
